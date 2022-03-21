@@ -20,16 +20,21 @@ const HomeScreen = () => {
             <br/>
             
             <Router>
-                <Link to="/apple">Apples</Link> | <Link to="/orange">Oranges</Link>
-
-                <Switch>
-                    <Route path="/apple">
-                        <Apple />
-                    </Route>    
-                    <Route path="/orange">
-                        <Orange />
-                    </Route>
-                </Switch>       
+                
+                <div>
+                    <Link to="/apple">Apples</Link> | <Link to="/orange">Oranges</Link> | <Link to="/">None</Link>
+                </div>
+                
+                <div>
+                    <Switch>
+                        <Route path="/apple">
+                            <Apple />
+                        </Route>    
+                        <Route path="/orange">
+                            <Orange />
+                        </Route>
+                    </Switch>       
+                </div>
             </Router>
             
         </>
