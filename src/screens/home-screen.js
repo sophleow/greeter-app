@@ -1,4 +1,4 @@
-import {Switch, Route, BrowserRouter as Router, Link} from "react-router-dom";
+import {Routes, Route, BrowserRouter as Router, Link} from "react-router-dom";
 import {useState} from "react";
 import Input from "./components/input";
 import Intro from "./components/intro";
@@ -19,21 +19,15 @@ const HomeScreen = () => {
             {firstName ? <Intro firstName={firstName}/> : <Input submitNameFn={handleNameSubmit} />}     
             <br/>
             
-            <Router>
-                
+            <Router>                
                 <div>
                     <Link to="/apple">Apples</Link> | <Link to="/orange">Oranges</Link> | <Link to="/">None</Link>
-                </div>
-                
-                <div>
-                    <Switch>
-                        <Route path="/apple">
-                            <Apple />
-                        </Route>    
-                        <Route path="/orange">
-                            <Orange />
-                        </Route>
-                    </Switch>       
+                </div>                
+                <div>    
+                    <Routes>
+                        <Route path="/apple" element={<Apple />} />                                                        
+                        <Route path="/orange" element={<Orange />} />                            
+                    </Routes>                                    
                 </div>
             </Router>
             
