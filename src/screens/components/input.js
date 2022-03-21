@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-function Login(props) {
+function Input(props) {
 
     const [value, setValue] = useState(null);
 
@@ -21,4 +21,4 @@ function Login(props) {
     )
 }
 
-export default Login;
+export default Input;
