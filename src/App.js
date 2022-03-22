@@ -1,12 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-import HomeScreen from './screens/home-screen';
+import logo from "./logo.svg";
+import "./App.css";
+import HomeScreen from "./screens/home";
 
 function App() {
-  return (
-
-      <HomeScreen />
-  );
+	return <HomeScreen />;
 }
 
 export default App;
